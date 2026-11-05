@@ -1,0 +1,102 @@
+Next steps to use your Sitecore AI app
+The app ID is only the identity of the app. To actually use it inside Sitecore AI, you still need to complete the runtime, auth, and install flow.
+
+1) Make sure the app is deployed and reachable
+Your app must be running on a valid public HTTPS URL that Sitecore AI can load.
+
+Check:
+
+HTTPS only
+Correct app entry URL
+Allowed CORS / callback URLs
+App can respond to requests from the Sitecore AI host
+If the app is embedded in Sitecore AI, the app is usually loaded in an iframe and must be able to talk to the host via the Marketplace SDK.
+
+2) Configure the app’s runtime settings
+Your app needs the tenant-specific values for the Search API and index.
+
+Typical values:
+
+SEARCH_INDEX_ID
+SITECORE_EDGE_CONTEXT_ID
+SCAI_BASE_URL
+SCAI_CONFIG_URL
+SCAI_API_KEY or SCAI_TOKEN
+SCAI_CONFIG_TOKEN
+CLIENT_ID / CLIENT_SECRET if using OAuth
+Example:
+
+Without the correct app tenant config, the app can exist but will not actually connect to Search.
+
+3) Add the Marketplace/host handshake
+If this is an embedded Sitecore AI app, it should read the runtime host context instead of assuming local env values.
+
+Use the Marketplace host SDK:
+
+ClientSDK.init({ target: window.parent })
+then query application.context
+From that host context, read the active values such as:
+
+searchIndexId
+indexId
+sourceId
+sitecoreContextId
+This is what lets the app dynamically select the correct Search source/index when opened inside Sitecore AI.
+
+4) Register and install the app in the correct tenant
+Depending on how your Sitecore AI app is packaged, you will usually need:
+
+app registration in the tenant or project
+publish/deploy to the target environment
+install or assign it to the environment where users will open it
+confirm permissions for Search config access and push access
+The app ID alone does not grant runtime access to data. The runtime must also be authorized for that tenant.
+
+5) Validate the app before real use
+Test in this order:
+
+Run the app locally
+Confirm env values load
+Confirm schema metadata loads for the selected index
+Confirm the app receives host context in Sitecore AI
+Confirm push request uses the correct index and correct id field for upsert
+Run a small test document push
+Important: the push identity is usually based on the operation id, not the URL. The sc_url is metadata, not the primary upsert key.
+
+6) Publish and use it from Sitecore AI
+After all config is working:
+
+deploy the app
+publish the app definition
+open it from the tenant/project in Sitecore AI
+select the push source/index
+use it to ingest CSV/JSON mapped data
+Recommended checklist
+Use this as the final gate:
+
+ App is deployed to HTTPS
+ App ID is registered in Sitecore AI
+ Tenant-specific config is loaded
+ Search index ID is valid
+ Sitecore context ID is valid
+ Marketplace host context is read correctly
+ App can fetch schema metadata
+ Push API accepts the payload
+ Upsert key is valid
+ App is installed in the target tenant
+Best next step for your case
+Since you already built the app and have the app ID, the next concrete step is:
+
+deploy the app to an accessible URL
+update the Sitecore AI app registration with that URL
+add the tenant env/config values
+test the host context and selected index
+then install/publish it in the actual Sitecore AI environment
+If you want, I can give you a very specific “Sitecore AI app activation checklist” for your exact app type:
+
+embedded marketplace app
+standalone external app
+Search ingestion app
+push source app
+If you tell me whether this is a Marketplace/embedded app or a standalone external app, I can give you the exact next configuration steps.
+

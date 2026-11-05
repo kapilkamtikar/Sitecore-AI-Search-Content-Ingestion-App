@@ -1,0 +1,344 @@
+{
+  "id": "f33d49b3-f7fa-4dcb-959c-f3f209cf4ba8",
+  "name": "xc_push_dev",
+  "description": "xc_push_dev all fields",
+  "searchClientKey": "f796ed4c6677902d456f4fe54c93fd26",
+  "tenantId": "457e8378-1602-4c6d-4455-08dc6a8ed939",
+  "sourceType": "push",
+  "fields": [
+    {
+      "id": "",
+      "name": "title",
+      "type": "string",
+      "displayName": "Title",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": true
+      },
+      "sort": {
+        "enabled": true
+      },
+      "filter": {
+        "enabled": true
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "",
+      "name": "description",
+      "type": "string",
+      "displayName": "Description",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": true
+      },
+      "sort": {
+        "enabled": false
+      },
+      "filter": {
+        "enabled": false
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "",
+      "name": "url",
+      "type": "string",
+      "displayName": "Url",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": false
+      },
+      "sort": {
+        "enabled": false
+      },
+      "filter": {
+        "enabled": false
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "",
+      "name": "author",
+      "type": "tags",
+      "displayName": "Author",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": false
+      },
+      "sort": {
+        "enabled": false
+      },
+      "filter": {
+        "enabled": true
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "",
+      "name": "tags",
+      "type": "tags",
+      "displayName": "Tags",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": false
+      },
+      "sort": {
+        "enabled": false
+      },
+      "filter": {
+        "enabled": true
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "",
+      "name": "category",
+      "type": "tags",
+      "displayName": "Category",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": false
+      },
+      "sort": {
+        "enabled": false
+      },
+      "filter": {
+        "enabled": true
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "",
+      "name": "created",
+      "type": "double",
+      "displayName": "Created",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": false
+      },
+      "sort": {
+        "enabled": true
+      },
+      "filter": {
+        "enabled": true
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "",
+      "name": "updated",
+      "type": "double",
+      "displayName": "Updated",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": false
+      },
+      "sort": {
+        "enabled": true
+      },
+      "filter": {
+        "enabled": true
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "",
+      "name": "content",
+      "type": "string",
+      "displayName": "Content",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": true
+      },
+      "sort": {
+        "enabled": false
+      },
+      "filter": {
+        "enabled": false
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "",
+      "name": "heading",
+      "type": "string",
+      "displayName": "Heading",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": true
+      },
+      "sort": {
+        "enabled": false
+      },
+      "filter": {
+        "enabled": false
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "",
+      "name": "metakeywords",
+      "type": "string",
+      "displayName": "MetaKeywords",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": true
+      },
+      "sort": {
+        "enabled": false
+      },
+      "filter": {
+        "enabled": true
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "",
+      "name": "image",
+      "type": "string",
+      "displayName": "Image",
+      "description": "",
+      "key": {
+        "enabled": true
+      },
+      "search": {
+        "enabled": false
+      },
+      "sort": {
+        "enabled": false
+      },
+      "filter": {
+        "enabled": false
+      },
+      "retrieve": {
+        "enabled": true
+      },
+      "facet": {
+        "enabled": false
+      }
+    }
+  ],
+  "searchSettings": {
+    "fuzzySearch": {
+      "enabled": true
+    },
+    "semanticRanking": {
+      "enabled": true
+    }
+  },
+  "suggestion": {
+    "querySuggestion": {
+      "enabled": true,
+      "fields": [
+        "title"
+      ],
+      "limit": 6
+    },
+    "previewResults": {
+      "enabled": true,
+      "limit": 2
+    }
+  },
+  "status": "active",
+  "versionNumber": 1,
+  "createdBy": "auth0|659d18f760c25f3c9716bab9",
+  "createdAt": "2026-10-22T16:38:34Z",
+  "updatedBy": "auth0|659d18f760c25f3c9716bab9",
+  "updatedAt": "2026-10-22T16:39:06Z",
+  "publishedBy": "auth0|659d18f760c25f3c9716bab9",
+  "publishedAt": "2026-10-22T16:39:06Z",
+  "locales": [
+    "en",
+    "fr",
+    "fr-CA"
+  ]
+}
